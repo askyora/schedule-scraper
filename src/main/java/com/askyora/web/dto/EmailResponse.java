@@ -12,14 +12,15 @@ public class EmailResponse {
 
 	public EmailResponse(boolean success, String jobId, String group, String message) {
 		this(success, message);
-		this.jobGroup=group;
-		this.jobId=jobId;
+		this.jobGroup = group;
+		this.jobId = jobId;
 	}
 
 	private boolean success;
 	private String jobId;
 	private String jobGroup;
 	private String message;
+
 	public boolean isSuccess() {
 		return success;
 	}
@@ -51,6 +52,5 @@ public class EmailResponse {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	
-	
+
 }

@@ -32,7 +32,7 @@ public class EmailService {
 	private Scheduler scheduler;
 
 	public EmailResponse scheduleEmail(@Valid EmailRequest request) {
-		 log.info("email {}", request.toString());
+		log.info("email {}", request.toString());
 		try {
 			ZonedDateTime dateTime = ZonedDateTime.of(request.getDateTime(), request.getTimeZone());
 			JobDetail jobDetail = buildJobDetail(request);
@@ -43,15 +43,12 @@ public class EmailService {
 					jobDetail.getKey().getGroup(), "Email Scheduled Successfully!");
 			return scheduleEmailResponse;
 		} catch (SchedulerException ex) {
-			 log.error("Error scheduling email", ex);
+			log.error("Error scheduling email", ex);
 
 			EmailResponse scheduleEmailResponse = new EmailResponse(false, "Error scheduling email. Please try later!");
 			return scheduleEmailResponse;
 		}
 	}
-	
-	
-	
 
 	private JobDetail buildJobDetail(EmailRequest request) {
 		JobDataMap jobDataMap = new JobDataMap();
