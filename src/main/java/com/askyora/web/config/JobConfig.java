@@ -19,15 +19,15 @@ public class JobConfig {
 
 	@Value("${am.hour:9}")
 	private int amHour;
-	@Value("${am.mintus:0}")
+	@Value("${am.minutes:0}")
 	private int amMin;
 
 	@Value("${pm.hour:18}")
 	private int pmHour;
-	@Value("${pm.mintus:0}")
+	@Value("${pm.minutes:0}")
 	private int pmMin;
 
-	@Value("${timezone:IST}")
+	@Value("${job.timezone:IST}")
 	private String timeZone = "IST";
 
 	@Bean
