@@ -103,24 +103,20 @@ public class PassStatusScraperService {
 			wait.until(ExpectedConditions.textToBe(By.cssSelector(".pageHead"), "Enquire - Application/Pass Status"));
 		}
 		driver.findElement(By.name("requesterNRICFIN")).sendKeys(ep);
-
 		driver.findElement(By.name("requesterName")).sendKeys(name);
 		driver.findElement(By.name("save")).click();
 		{
 			WebDriverWait wait = new WebDriverWait(driver, 30);
 			wait.until(ExpectedConditions.textToBe(By.cssSelector(".pageHead"), "Enquire - Application/Pass Status"));
 		}
-
 		driver.findElement(By.name("travelDocNo")).sendKeys(passport);
 		driver.findElement(By.name("trvDateBirth")).sendKeys(dob);
-
 		driver.findElement(By.name("submitForm")).click();
 		{
 			WebDriverWait wait = new WebDriverWait(driver, 30);
 			wait.until(ExpectedConditions.textToBe(By.cssSelector(".pageHead"), "Enquire - Application/Pass Status"));
 		}
 		String value = driver.findElement(By.cssSelector("tr:nth-child(6) > td:nth-child(3)")).getText();
-
 		composeAndScheduleEmail(value);
 	}
 

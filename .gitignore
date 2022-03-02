@@ -3,3 +3,16 @@
 docker-compose/docker-compose.yml
 .project
 target/**
+bin/src/main/java/com/askyora/web/config/EmailJob.class
+.settings/org.eclipse.jdt.core.prefs
+bin/docker-compose/docker-compose.yml
+bin/Dockerfile
+bin/driver/chromedriver
+bin/HELP.md
+bin/mvnw
+bin/mvnw.cmd
+bin/pom.xml
+.classpath
+*.prefs
+bin/src/main/resources/application.properties
+bin/src/main/java/com/askyora/web/config/JobConfig.class
