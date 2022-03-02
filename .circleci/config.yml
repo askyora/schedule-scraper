@@ -30,7 +30,7 @@ jobs:
       - run: |
           docker build -t askyora/open-common:ep-status .
           echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_LOGIN --password-stdin
-          docker push askyora/open-ladder:ep-status
+          docker push askyora/open-common:ep-status
 
 workflows:
   # Below is the definition of your workflow.
